@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950699477730",
+    "project_id": "trabajokotlin",
+    "storage_bucket": "trabajokotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950699477730:android:37066eed8c523a10082cbb",
+        "android_client_info": {
+          "package_name": "com.example.oraganizadtn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950699477730-sb42hk02e0m6dvqm5cf650ts9hbs7e5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvLIYUYH0k22N8rYy9Ib__Zr6JuAn5vBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950699477730-sb42hk02e0m6dvqm5cf650ts9hbs7e5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

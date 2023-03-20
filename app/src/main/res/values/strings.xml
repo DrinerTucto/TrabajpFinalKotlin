@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">OraganizaDTN</string>
+    <string-array name="ubicacion">
+        <item>ALBANIA</item>
+        <item>ALEMANIA</item>
+        <item>AUSTRIA</item>
+        <item>AZERBAIYÁN</item>
+        <item>BELARRÚS</item>
+        <item>BRASIL</item>
+        <item>BULGARIA</item>
+        <item>DINAMARCA</item>
+        <item>ECUADOR</item>
+        <item>EGIPTO</item>
+        <item>EL SALVADOR</item>
+        <item>ESPAÑA</item>
+        <item>EGIPTO</item>
+        <item>FILIPINAS</item>
+        <item>FINLANDIA</item>
+        <item>FIYI</item>
+        <item>FRANCIA</item>
+        <item>PARAGUAY</item>
+        <item>EGIPTO</item>
+        <item>PAÍSES BAJOS</item>
+        <item>PERÚ</item>
+        <item>POLONIA</item>
+        <item>PORTUGAL</item>
+
+
+    </string-array>
+</resources>
