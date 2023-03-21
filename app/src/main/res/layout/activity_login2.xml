@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:text="Iniciar sesion"
+            android:textStyle="bold"
 
             android:textSize="34sp">
 
@@ -132,7 +133,14 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="40dp"
+            android:text="Iniciar sesion"></Button>
+     </LinearLayout>
 
 
 
