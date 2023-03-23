@@ -36,21 +36,59 @@
        android:layout_height="wrap_content">
 
        <EditText
+           android:id="@+id/datos1"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:hint="Ingresa actividad"
-           android:textSize="30dp"
-           android:textStyle="bold"
-           android:textColor="@color/black"
            android:textAlignment="center"
-           >
+           android:textColor="@color/black"
+           android:textSize="30dp"
+           android:textStyle="bold">
 
        </EditText>
 
    </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/horasel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:clickable="true"
+            android:hint="12/11/10"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold">
 
+        </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+            android:id="@+id/bt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/datos2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp" />
 
 
 </LinearLayout>

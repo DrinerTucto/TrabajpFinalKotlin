@@ -74,6 +74,7 @@ class IniciActivity2 : AppCompatActivity() {
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val f = findViewById<TextView>(R.id.horasel)
 
         when(item.itemId){
 
@@ -83,10 +84,10 @@ class IniciActivity2 : AppCompatActivity() {
                 startActivity(cerrar)
             }
 
-
         }
         return super.onOptionsItemSelected(item)
     }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_inici2)
