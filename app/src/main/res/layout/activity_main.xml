@@ -1,88 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/pantalla"
-    android:background="@color/black"
-    tools:context=".MainActivity">
+      android:orientation="vertical"
+     tools:context=".MainActivity"
+    >
 
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    >
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView2"
-        android:layout_width="342dp"
-        android:layout_height="60dp"
-        android:text="Seleccione su sexo"
-        android:textColor="@color/white"
-        android:textSize="35sp"
+
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+         android:text="Seleccione su sexo"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.215" />
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="35sp">
+    </androidx.appcompat.widget.AppCompatTextView>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Seleccionar"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
+        android:layout_marginTop="50dp"
+        >
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="212dp"
-        android:layout_height="188dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Hombre"
-            android:textColor="@color/white"
-            android:textSize="34sp" />
+   <RadioGroup
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="40dp"
+       android:layout_marginRight="40dp"
+       android:layout_marginBottom="40dp"
+       >
 
-        <RadioButton
+       <RadioButton
+           android:text="Hombre"
+        android:id="@+id/seleccion1"
+android:textSize="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:text="Mujer"
-            android:textColor="@color/white"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    </RadioButton>
+       <RadioButton
+           android:text="Mujer"
+           android:id="@+id/seleccion2"
+           android:textSize="28dp"
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+       </RadioButton>
+       <RadioButton
+           android:id="@+id/seleccion3"
             android:text="Otro"
-            android:textColor="@color/white"
-            android:textSize="34sp" />
+           android:textSize="28dp"
 
-    </RadioGroup>
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+       </RadioButton>
+   </RadioGroup>
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/cerrar"
+        android:layout_gravity="center"
+        android:id="@+id/seleccion"
+        android:text="Seleccionar"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </Button>
+
+</LinearLayout>

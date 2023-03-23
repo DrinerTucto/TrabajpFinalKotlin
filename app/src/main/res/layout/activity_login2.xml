@@ -40,13 +40,14 @@
         android:layout_marginTop="60dp"
         app:cardCornerRadius="100dp"
         android:layout_gravity="center"
+
         app:cardBackgroundColor="#57FFFFFF"
         android:layout_marginBottom="50dp">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:src="@drawable/d5e6a5a550cdd17149c2790cec8fa0fb_removebg_preview"
 
             android:visibility="invisible" />
@@ -63,11 +64,12 @@
         <ImageView
 
             android:id="@+id/otro"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-             android:src="@drawable/bandera_0012_pride"
+            android:layout_width="110dp"
+            android:layout_height="150dp"
 
-            android:visibility="invisible"/>
+            android:src="@drawable/bandera_0012_pride"
+
+            android:visibility="invisible" />
     </androidx.cardview.widget.CardView>
 
 

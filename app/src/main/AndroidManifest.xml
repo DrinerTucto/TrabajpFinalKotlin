@@ -16,8 +16,25 @@
         android:theme="@style/Theme.OraganizaDTN"
         tools:targetApi="31">
         <activity
-            android:name=".InicioActivity2"
+            android:name=".MainActivity2"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".IniciActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_inici2"
+            android:theme="@style/Theme.OraganizaDTN.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InicioActivity2"
+            android:exported="false"
+            android:theme="@style/Theme.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

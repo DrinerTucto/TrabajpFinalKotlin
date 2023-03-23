@@ -44,11 +44,12 @@ class loginActivity2 : AppCompatActivity() {
             image3.visibility=View.VISIBLE
 
         }
+
         auth= Firebase.auth
 
          val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
+            .requestIdToken(getString(R.string.default_web_client_id))//token generado de nuestra app
+            .requestEmail()//lo que queremos solicitar al hacer login
             .build()
         googleSingcliente = GoogleSignIn.getClient(this, gso)
         findViewById<Button>(R.id.gSingInbtn).setOnClickListener {
@@ -73,7 +74,7 @@ class loginActivity2 : AppCompatActivity() {
 
     private fun hadleResults(task: Task<GoogleSignInAccount>) {
         if (task.isSuccessful) {
-            val account: GoogleSignInAccount? = task.result
+            val account: GoogleSignInAccount? = task.result //recuperar el correo introducido
             if (account != null) {
                 updateUO(account)
             }
@@ -90,7 +91,7 @@ class loginActivity2 : AppCompatActivity() {
 
             if (task.isSuccessful){
 
-                val intent: Intent=Intent(this,InicioActivity2::class.java)
+                val intent: Intent=Intent(this,IniciActivity2::class.java)
                 startActivity(intent)
 
             }else{
@@ -102,8 +103,9 @@ class loginActivity2 : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (auth.currentUser != null){
-            val intent: Intent=Intent(this,InicioActivity2::class.java)
-            startActivity(intent)
+            val intent: Intent=Intent(this,IniciActivity2::class.java)
+              startActivity(intent)
+
         }
     }
 }

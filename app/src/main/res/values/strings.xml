@@ -1,30 +1,17 @@
 <resources>
     <string name="app_name">OraganizaDTN</string>
-    <string-array name="ubicacion">
-        <item>ALBANIA</item>
-        <item>ALEMANIA</item>
-        <item>AUSTRIA</item>
-        <item>AZERBAIYÁN</item>
-        <item>BELARRÚS</item>
-        <item>BRASIL</item>
-        <item>BULGARIA</item>
-        <item>DINAMARCA</item>
-        <item>ECUADOR</item>
-        <item>EGIPTO</item>
-        <item>EL SALVADOR</item>
-        <item>ESPAÑA</item>
-        <item>EGIPTO</item>
-        <item>FILIPINAS</item>
-        <item>FINLANDIA</item>
-        <item>FIYI</item>
-        <item>FRANCIA</item>
-        <item>PARAGUAY</item>
-        <item>EGIPTO</item>
-        <item>PAÍSES BAJOS</item>
-        <item>PERÚ</item>
-        <item>POLONIA</item>
-        <item>PORTUGAL</item>
+    <string name="open_nav">Open navegacion</string>
 
+    <string name="close_nav">close navegacion</string>
+    <string name="title_activity_inici2">IniciActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Cerrar Sesion</string>
 
-    </string-array>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Editar perfil </string>
+    <string name="menu_slideshow">Configuracion</string>
 </resources>

@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.RadioButton
+import android.widget.*
 import androidx.core.view.isInvisible
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -21,23 +18,30 @@ class MainActivity : AppCompatActivity() {
 
         auth= Firebase.auth
 
-        val r1 = findViewById<RadioButton>(R.id.radioButton)
-        val r2 = findViewById<RadioButton>(R.id.radioButton2)
-        val r3 = findViewById<RadioButton>(R.id.radioButton3)
-        val btn = findViewById<Button>(R.id.button2)
+        val r1 = findViewById<RadioButton>(R.id.seleccion1)
+        val r2 = findViewById<RadioButton>(R.id.seleccion2)
+        val r3 = findViewById<RadioButton>(R.id.seleccion3)
+        val btn = findViewById<Button>(R.id.seleccion)
+        var pantalla = findViewById<LinearLayout>(R.id.pantalla)
 
-
-
+        //CORRIGE EL BUG DEL ACTIVITI QUE SE MUESTRA AL INICAR LA APP
+        if (auth.currentUser != null){
+    pantalla.visibility=View.INVISIBLE
+}
+        //FIN*******************
         btn.setOnClickListener {
-            if (r1.isChecked) {
+
+             if (r1.isChecked) {
                 validarhm("hombre")
 
-            }
+             }
             if (r2.isChecked) {
                 validarhm("mujer")
+
             }
             if(r3.isChecked){
                 validarhm("otro")
+
 
             }
         }
@@ -52,5 +56,17 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+    //Este METODO ARA QUE SE MUESTRE LA SESION DE DONDE ESTUVISTE
+    override fun onStart() {
+
+        super.onStart()
+        if (auth.currentUser != null){
+
+            val intent: Intent=Intent(this,IniciActivity2::class.java)
+            startActivity(intent)
+
+        }
+    }
+
 
 }

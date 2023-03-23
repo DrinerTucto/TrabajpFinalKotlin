@@ -19,8 +19,10 @@ class InicioActivity2 : AppCompatActivity() {
         btn=findViewById(R.id.cerrarSesion)
         btn.setOnClickListener {
             auth.signOut()
-            val cerrar = Intent(this,loginActivity2::class.java)
+            val cerrar = Intent(this,MainActivity::class.java)
+
             startActivity(cerrar)
+
         }
 
 
