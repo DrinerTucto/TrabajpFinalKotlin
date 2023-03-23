@@ -12,23 +12,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="40dp"
-        android:orientation="vertical"
-        android:layout_marginBottom="50dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vamos a ordenar tus actividades diarias"
+            android:layout_marginLeft="90dp"
+            android:baselineAligned="false"
+            android:fontFamily="@font/letra"
+            android:text="! VAMOS A ORDENAR TUS ACTIVIDADES DIARIAS !"
             android:textAlignment="center"
             android:textColor="#0C7AAC"
-            android:textSize="40sp"
-            android:fontFamily="@font/letra"
 
+            android:textSize="30sp"
             android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="164dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/let" />
 
     </LinearLayout>
    <LinearLayout
@@ -41,21 +51,24 @@
            android:id="@+id/datos1"
            android:fontFamily="@font/letra2"
            android:layout_marginLeft="15dp"
-
+android:padding="8dp"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:hint="Ingresa la actividad"
 android:layout_gravity="center"
            android:textColor="@color/black"
            android:textSize="30sp"
-           android:textStyle="bold">
-
+           android:textStyle="bold"
+           android:singleLine="true"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentEnd="true">
        </EditText>
 
    </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
         android:layout_width="match_parent"
         android:layout_marginRight="30dp"
@@ -63,15 +76,16 @@ android:layout_gravity="center"
         android:layout_height="wrap_content">
 
         <TextView
-            android:fontFamily="@font/letra2"
-            android:layout_marginLeft="15dp"
             android:id="@+id/horasel"
-            android:layout_width="wrap_content"
+            android:layout_width="273dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
             android:clickable="true"
+            android:fontFamily="@font/letra2"
             android:hint="Ingresa la fecha"
- android:layout_gravity="center"
-             android:layout_weight="1"
+            android:padding="8dp"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold">
@@ -90,7 +104,7 @@ android:layout_gravity="center"
 
     </LinearLayout>
 <LinearLayout
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="15dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
@@ -103,7 +117,7 @@ android:layout_gravity="center"
         android:id="@+id/bt"
         android:fontFamily="@font/letra2"
         android:layout_marginLeft="15dp"
-
+android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Ingresa la hora"
@@ -119,16 +133,19 @@ android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:src="@drawable/reloj"
 
-        android:src="@drawable/reloj" />
+        android:tooltipText="@string/btn_nada"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </LinearLayout>
     <Button
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/bt3"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

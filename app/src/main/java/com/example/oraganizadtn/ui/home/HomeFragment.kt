@@ -50,26 +50,37 @@ class HomeFragment : Fragment() {
 }
 
         hora.setOnClickListener {
-                cliken2()
-
+            val startHour=today.get(Calendar.HOUR_OF_DAY)
+            val stackMi=today.get(Calendar.MINUTE)
+            TimePickerDialog(this.context, TimePickerDialog.OnTimeSetListener { TimePicker, i, i2 ->
+                hora.setText("$i:$i2")
+            }, startHour, stackMi, false).show()
+        }
+        horaicon2.setOnClickListener {
+            cliken2()
         }
 
 
         fecha.setOnClickListener{
-            clikfecha2()
-        }
+
+            DatePickerDialog( requireContext(),DatePickerDialog.OnDateSetListener{ DatePicker, a, e, b ->
+            fecha.setText("$a/$e/$b")
+            },2007,7,8).show()
+         }
 
 
         binding.bt3.setOnClickListener {
             val user = hashMapOf(
-                "nombre" to binding.datos1.text.toString(),
-                "Actividad" to binding.horasel.text.toString()
+                "Actividad" to binding.datos1.text.toString(),
+                "Fecha" to binding.horasel.text.toString(),
+                "Hora" to binding.bt.text.toString()
+
 
             )
-            db.collection("usuarios")
-                .add(user)
+            db.collection("usuarios").document("Actividades a realizar")
+                .set(user)
                 .addOnSuccessListener { documentReference->
-                    Toast.makeText(requireContext(), "holas", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Datos guardados", Toast.LENGTH_SHORT).show()
 
                 }
         }
@@ -84,11 +95,12 @@ class HomeFragment : Fragment() {
     }
 
     fun clikfecha2(){
+
         DatePickerDialog( requireContext(),DatePickerDialog.OnDateSetListener{ DatePicker, a, e, b ->
 
         },2007,7,8).show()
     }
-    fun cliken2 (){
+     private fun cliken2 (){
         val startHour=today.get(Calendar.HOUR_OF_DAY)
         val stackMi=today.get(Calendar.MINUTE)
         TimePickerDialog(this.context, TimePickerDialog.OnTimeSetListener { TimePicker, i, i2 ->

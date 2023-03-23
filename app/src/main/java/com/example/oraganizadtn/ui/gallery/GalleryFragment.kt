@@ -4,13 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.oraganizadtn.R
 import com.example.oraganizadtn.databinding.FragmentGalleryBinding
 
 class GalleryFragment : Fragment() {
-
+    lateinit var  ArrayAdapter: ArrayAdapter<*>
+private var activades = emptyArray<String>()
     private var _binding: FragmentGalleryBinding? = null
 
     // This property is only valid between onCreateView and
@@ -27,12 +30,23 @@ class GalleryFragment : Fragment() {
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val activades = arrayOf(
 
-        val textView: TextView = binding.textGallery
+            "Driner",
+            "Mario",
+            "Marcos",
+            "Kalifa",
+            "Gorge"
+        )
+        var iadap=ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1,activades)
+        binding.listaactivades.adapter=iadap
+       // val textView: TextView = binding.textGallery
         galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+           // textView.text = it
         }
         return root
+
+
     }
 
     override fun onDestroyView() {
