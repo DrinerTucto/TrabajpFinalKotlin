@@ -14,4 +14,6 @@
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Editar perfil </string>
     <string name="menu_slideshow">Configuracion</string>
+    <string name="btn_nada"></string>
+
 </resources>

@@ -24,25 +24,30 @@
             android:layout_height="wrap_content"
             android:text="Vamos a ordenar tus actividades diarias"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="40dp"
+            android:textColor="#0C7AAC"
+            android:textSize="40sp"
+            android:fontFamily="@font/letra"
+
             android:textStyle="bold"></TextView>
 
     </LinearLayout>
    <LinearLayout
-       android:layout_marginLeft="30dp"
+        android:layout_marginLeft="30dp"
        android:layout_width="match_parent"
        android:layout_marginRight="30dp"
        android:layout_height="wrap_content">
 
        <EditText
            android:id="@+id/datos1"
+           android:fontFamily="@font/letra2"
+           android:layout_marginLeft="15dp"
+
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:hint="Ingresa actividad"
-           android:textAlignment="center"
+           android:hint="Ingresa la actividad"
+android:layout_gravity="center"
            android:textColor="@color/black"
-           android:textSize="30dp"
+           android:textSize="30sp"
            android:textStyle="bold">
 
        </EditText>
@@ -50,45 +55,89 @@
    </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_width="match_parent"
         android:layout_marginRight="30dp"
+
         android:layout_height="wrap_content">
 
         <TextView
+            android:fontFamily="@font/letra2"
+            android:layout_marginLeft="15dp"
             android:id="@+id/horasel"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:clickable="true"
-            android:hint="12/11/10"
-            android:textAlignment="center"
+            android:hint="Ingresa la fecha"
+ android:layout_gravity="center"
+             android:layout_weight="1"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold">
 
         </TextView>
 
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/fecha"
+
+            android:tooltipText="@string/btn_nada"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
     </LinearLayout>
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
 
-    <Button
-        android:id="@+id/bt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-            android:id="@+id/bt3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+     android:orientation="horizontal"
+    >
 
     <TextView
-        android:id="@+id/datos2"
+        android:id="@+id/bt"
+        android:fontFamily="@font/letra2"
+        android:layout_marginLeft="15dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa la hora"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:textSize="30sp"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+        android:src="@drawable/reloj" />
+
+
+</LinearLayout>
+    <Button
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/bt3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+
+
+        android:text="Registrar actividad" />
+
+
+
+
 
 
 </LinearLayout>

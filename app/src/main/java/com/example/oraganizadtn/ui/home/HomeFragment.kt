@@ -38,30 +38,32 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val startHour=today.get(Calendar.HOUR_OF_DAY)
-        val stackMi=today.get(Calendar.MINUTE)
 
-        val hora: Button = root.findViewById(R.id.bt)
+
+        val hora: TextView = root.findViewById(R.id.bt)
         val fecha: TextView = root.findViewById(R.id.horasel)
+        val horaicon:ImageButton=root.findViewById(R.id.imageButton2)
+        val horaicon2:ImageButton=root.findViewById(R.id.imageButton)
 
+        horaicon.setOnClickListener{
+    cliken2()
+}
 
         hora.setOnClickListener {
+                cliken2()
 
-            TimePickerDialog(this.context, TimePickerDialog.OnTimeSetListener { TimePicker, i, i2 ->
-
-
-            }, startHour, stackMi, false).show()
         }
+
 
         fecha.setOnClickListener{
-            DatePickerDialog( requireContext(),DatePickerDialog.OnDateSetListener{ DatePicker, a, e, b ->
-
-            },2007,7,8).show()
+            clikfecha2()
         }
+
+
         binding.bt3.setOnClickListener {
             val user = hashMapOf(
                 "nombre" to binding.datos1.text.toString(),
-                "Actividad" to binding.datos2.text.toString()
+                "Actividad" to binding.horasel.text.toString()
 
             )
             db.collection("usuarios")
@@ -81,10 +83,17 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    fun clikfecha2(){
+        DatePickerDialog( requireContext(),DatePickerDialog.OnDateSetListener{ DatePicker, a, e, b ->
 
-
-
-
+        },2007,7,8).show()
+    }
+    fun cliken2 (){
+        val startHour=today.get(Calendar.HOUR_OF_DAY)
+        val stackMi=today.get(Calendar.MINUTE)
+        TimePickerDialog(this.context, TimePickerDialog.OnTimeSetListener { TimePicker, i, i2 ->
+        }, startHour, stackMi, false).show()
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
