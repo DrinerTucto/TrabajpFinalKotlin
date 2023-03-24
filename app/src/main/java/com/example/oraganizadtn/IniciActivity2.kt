@@ -68,6 +68,7 @@ class IniciActivity2 : AppCompatActivity() {
         val d = findViewById<TextView>(R.id.nombre)
         d.setText("driner")
 
+
         return true
 
     }

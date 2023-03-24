@@ -30,9 +30,10 @@ private var activades = emptyArray<String>()
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val activades = arrayOf(
+        val dato1 : String="Driner"
 
-            "Driner",
+        val activades = arrayOf(
+            dato1,
             "Mario",
             "Marcos",
             "Kalifa",

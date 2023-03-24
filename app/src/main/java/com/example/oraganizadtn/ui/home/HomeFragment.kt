@@ -2,6 +2,7 @@ package com.example.oraganizadtn.ui.home
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.example.oraganizadtn.IniciActivity2
 import com.example.oraganizadtn.R
 import com.example.oraganizadtn.Tampiker
 import com.example.oraganizadtn.databinding.FragmentHomeBinding
+import com.example.oraganizadtn.ui.gallery.GalleryFragment
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestoreSettings
 import java.util.*
@@ -42,9 +44,10 @@ class HomeFragment : Fragment() {
 
         val hora: TextView = root.findViewById(R.id.bt)
         val fecha: TextView = root.findViewById(R.id.horasel)
-        val horaicon:ImageButton=root.findViewById(R.id.imageButton2)
+        val datos :EditText=root.findViewById(R.id.datos1)
+         val horaicon:ImageButton=root.findViewById(R.id.imageButton2)
         val horaicon2:ImageButton=root.findViewById(R.id.imageButton)
-
+        val driner : String="DRINER"
         horaicon.setOnClickListener{
     cliken2()
 }
@@ -55,7 +58,7 @@ class HomeFragment : Fragment() {
             TimePickerDialog(this.context, TimePickerDialog.OnTimeSetListener { TimePicker, i, i2 ->
                 hora.setText("$i:$i2")
             }, startHour, stackMi, false).show()
-        }
+         }
         horaicon2.setOnClickListener {
             cliken2()
         }
@@ -77,7 +80,7 @@ class HomeFragment : Fragment() {
 
 
             )
-            db.collection("usuarios").document("Actividades a realizar")
+            db.collection(driner).document(datos.text.toString())
                 .set(user)
                 .addOnSuccessListener { documentReference->
                     Toast.makeText(requireContext(), "Datos guardados", Toast.LENGTH_SHORT).show()

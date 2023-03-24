@@ -10,8 +10,7 @@
         android:id="@+id/listaactivades"
         android:layout_width="409dp"
         android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+         tools:layout_editor_absoluteY="1dp"
         tools:listitem="@android:layout/simple_list_item_1" />
 
 </LinearLayout>
