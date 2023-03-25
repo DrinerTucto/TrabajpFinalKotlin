@@ -4,16 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.oraganizadtn.R
+import androidx.recyclerview.widget.RecyclerView
 import com.example.oraganizadtn.databinding.FragmentGalleryBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class GalleryFragment : Fragment() {
-    lateinit var  ArrayAdapter: ArrayAdapter<*>
-private var activades = emptyArray<String>()
+    private lateinit var recyclerView:RecyclerView
+     private var db= Firebase.firestore
     private var _binding: FragmentGalleryBinding? = null
 
     // This property is only valid between onCreateView and
@@ -30,17 +30,8 @@ private var activades = emptyArray<String>()
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val dato1 : String="Driner"
 
-        val activades = arrayOf(
-            dato1,
-            "Mario",
-            "Marcos",
-            "Kalifa",
-            "Gorge"
-        )
-        var iadap=ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1,activades)
-        binding.listaactivades.adapter=iadap
+
        // val textView: TextView = binding.textGallery
         galleryViewModel.text.observe(viewLifecycleOwner) {
            // textView.text = it

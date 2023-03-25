@@ -4,20 +4,16 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.oraganizadtn.IniciActivity2
 import com.example.oraganizadtn.R
-import com.example.oraganizadtn.Tampiker
 import com.example.oraganizadtn.databinding.FragmentHomeBinding
-import com.example.oraganizadtn.ui.gallery.GalleryFragment
+import com.example.oraganizadtn.listasActivity2
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestoreSettings
 import java.util.*
 
 class HomeFragment : Fragment() {
@@ -48,6 +44,7 @@ class HomeFragment : Fragment() {
          val horaicon:ImageButton=root.findViewById(R.id.imageButton2)
         val horaicon2:ImageButton=root.findViewById(R.id.imageButton)
         val driner : String="DRINER"
+        val b : Button =root.findViewById(R.id.list)
         horaicon.setOnClickListener{
     cliken2()
 }
@@ -62,7 +59,10 @@ class HomeFragment : Fragment() {
         horaicon2.setOnClickListener {
             cliken2()
         }
-
+  b.setOnClickListener {
+           val i=Intent(requireContext(),listasActivity2::class.java)
+          startActivity(i)
+ }
 
         fecha.setOnClickListener{
 
