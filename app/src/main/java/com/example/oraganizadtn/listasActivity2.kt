@@ -21,6 +21,7 @@ class listasActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listas2)
+
         recyclerView=findViewById(R.id.recycleview)
         recyclerView.layoutManager=LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
@@ -37,7 +38,7 @@ class listasActivity2 : AppCompatActivity() {
     private fun listarDatos() {
 
         db = FirebaseFirestore.getInstance()
-        db.collection("usuarios").
+        db.collection("DRINER").
             addSnapshotListener(object :EventListener<QuerySnapshot>{
                 override fun onEvent(
                     value: QuerySnapshot?,

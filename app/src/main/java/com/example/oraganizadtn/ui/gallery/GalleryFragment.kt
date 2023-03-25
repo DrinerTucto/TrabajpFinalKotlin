@@ -12,8 +12,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class GalleryFragment : Fragment() {
-    private lateinit var recyclerView:RecyclerView
-     private var db= Firebase.firestore
+
     private var _binding: FragmentGalleryBinding? = null
 
     // This property is only valid between onCreateView and

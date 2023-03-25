@@ -1,64 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#5B51404B"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="30dp"
+    >
 
-        <TextView
-            android:id="@+id/actividad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="driner>"></TextView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/hora"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="driner>"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/fecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="driner>"></TextView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="120dp"
+      >
 
 
-</LinearLayout>
-    
-    
-    
-    
-    
+  <ImageView
+      android:layout_width="115dp"
+      android:layout_height="match_parent">
+
+  </ImageView>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="125dp"
+      android:layout_marginTop="38dp"
+      android:fontFamily="@font/letra"
+      android:text="Hora :"
+      android:textColor="@color/teal_700"
+      android:textSize="22dp">
+
+  </TextView>
+
+  <TextView
+      android:id="@+id/fecha"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:textColor="@color/black"
+
+      android:layout_marginStart="228dp"
+      android:layout_marginTop="82dp"
+      android:text="driner"
+      android:textSize="20dp"
+      android:textStyle="bold">
+
+  </TextView>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="124dp"
+      android:layout_marginTop="73dp"
+      android:fontFamily="@font/letra"
+      android:text="FECHA :"
+      android:textColor="@color/teal_700"
+
+      android:textSize="22dp">
+
+  </TextView>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="122dp"
+      android:layout_marginTop="7dp"
+      android:fontFamily="@font/letra"
+      android:text="Actividad :"
+      android:textColor="@color/teal_700"
+
+      android:textSize="22dp">
+
+  </TextView>
+
+  <TextView
+      android:id="@+id/hora"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="227dp"
+android:textColor="@color/black"
+      android:layout_marginTop="47dp"
+      android:text="driner"
+      android:textSize="20dp"
+
+      android:textStyle="bold">
+
+  </TextView>
+
+  <TextView
+      android:id="@+id/actividad"
+      android:textColor="@color/black"
+
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_marginStart="228dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginBottom="10dp"
+      android:text="driner"
+      android:textSize="20dp"
+      android:textStyle="bold">
+
+  </TextView>
+
+ </RelativeLayout>
+
+
 </androidx.cardview.widget.CardView>
