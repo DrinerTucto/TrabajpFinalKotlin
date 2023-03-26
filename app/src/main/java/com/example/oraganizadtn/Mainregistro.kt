@@ -25,7 +25,13 @@ class Mainregistro : AppCompatActivity() {
         btn.setOnClickListener(){
             var contra=contraseña.text.toString()
             var pass2=repcontra.text.toString()
-            if (contra.equals(pass2))
+            if (user.text.toString()==""||corre.text.toString()==""||user.text.toString()==""){
+                Toast.makeText(this, "Los campos no pueden estar basillos", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+            else if (contra.equals(pass2))
             {
                 CrearUsuario(corre.text.toString(),contraseña.text.toString())
                 Toast.makeText(baseContext, "INICIA SESION AHORA XD ", Toast.LENGTH_SHORT).show()

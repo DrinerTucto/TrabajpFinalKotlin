@@ -42,7 +42,12 @@ class loginActivity2 : AppCompatActivity() {
             startActivity(inte)
         }
         bt.setOnClickListener {
-            login(email.text.toString(),password.text.toString())
+            if(email.text.toString()==""||password.text.toString()==""){
+                Toast.makeText(this, "Los campos no pueden estar basillos", Toast.LENGTH_SHORT).show()
+            }else{
+                login(email.text.toString(),password.text.toString())
+
+            }
         }
 
 
@@ -71,7 +76,9 @@ class loginActivity2 : AppCompatActivity() {
 
 
     }
+fun valida(){
 
+}
 
     private fun signIngoogle() {
         val signIntent = googleSingcliente.signInIntent
@@ -117,7 +124,7 @@ class loginActivity2 : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (auth.currentUser != null){
-            val intent: Intent=Intent(this,IniciActivity2::class.java)
+              val intent: Intent=Intent(this,IniciActivity2::class.java)
               startActivity(intent)
 
         }
