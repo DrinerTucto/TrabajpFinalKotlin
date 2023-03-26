@@ -16,6 +16,13 @@
         android:theme="@style/Theme.OraganizaDTN"
         tools:targetApi="31">
         <activity
+            android:name=".Mainregistro"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".listasActivity2"
             android:exported="false">
             <meta-data

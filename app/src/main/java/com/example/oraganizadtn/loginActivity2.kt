@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -22,6 +23,7 @@ import com.google.firebase.ktx.Firebase
 
 
 class loginActivity2 : AppCompatActivity() {
+     private lateinit var autho: FirebaseAuth.AuthStateListener
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSingcliente: GoogleSignInClient
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +33,17 @@ class loginActivity2 : AppCompatActivity() {
         val image2 = findViewById<ImageView>(R.id.image1)
         val image3 = findViewById<ImageView>(R.id.otro)
         val bt = findViewById<Button>(R.id.button5)
+        val email =findViewById<TextView>(R.id.email)
+        val password =findViewById<TextView>(R.id.pass)
+        val registros=findViewById<Button>(R.id.dr)
+
+        registros.setOnClickListener {
+            val inte = Intent(this,Mainregistro::class.java)
+            startActivity(inte)
+        }
+        bt.setOnClickListener {
+            login(email.text.toString(),password.text.toString())
+        }
 
 
         val name = intent.extras?.getString("hombre").orEmpty()
@@ -58,6 +71,7 @@ class loginActivity2 : AppCompatActivity() {
 
 
     }
+
 
     private fun signIngoogle() {
         val signIntent = googleSingcliente.signInIntent
@@ -107,6 +121,22 @@ class loginActivity2 : AppCompatActivity() {
               startActivity(intent)
 
         }
+    }
+
+    private fun login(email:String,pasword:String) {
+
+        auth.signInWithEmailAndPassword(email, pasword)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    Toast.makeText(baseContext, "bienvenido ", Toast.LENGTH_SHORT).show()
+                    val name = Intent(this, IniciActivity2::class.java)
+                    startActivity(name)
+
+                } else {
+                    Toast.makeText(baseContext, "ERROR ", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
 

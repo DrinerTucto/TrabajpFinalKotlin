@@ -90,7 +90,7 @@
 
             </ImageView>
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Correo "
@@ -121,7 +121,7 @@
 
             </ImageView>
             <EditText
-                android:id="@+id/editTextTextPassword3"
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contraseña"
@@ -143,7 +143,7 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button4"
+                android:id="@+id/dr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
